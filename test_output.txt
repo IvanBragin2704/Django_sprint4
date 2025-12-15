@@ -1,0 +1,34 @@
+============================= test session starts =============================
+platform win32 -- Python 3.11.9, pytest-7.1.3, pluggy-1.0.0 -- D:\PyCharm\Projects\django4\.venv\Scripts\python.exe
+django: settings: blogicum.settings (from ini)
+rootdir: D:\PyCharm\Projects\django_sprint4, configfile: pytest.ini, testpaths: tests/
+plugins: Faker-12.0.1, django-4.5.2
+collecting ... collected 25 items
+
+tests/test_content.py::TestContent::test_unpublished <- ..\django4\tests\test_content.py PASSED [  4%]
+tests/test_content.py::TestContent::test_only_own_pubs_in_category <- ..\django4\tests\test_content.py PASSED [  8%]
+tests/test_content.py::TestContent::test_only_own_pubs_in_profile <- ..\django4\tests\test_content.py PASSED [ 12%]
+tests/test_content.py::TestContent::test_unpublished_category <- ..\django4\tests\test_content.py PASSED [ 16%]
+tests/test_content.py::TestContent::test_future_posts <- ..\django4\tests\test_content.py PASSED [ 20%]
+tests/test_content.py::TestContent::test_pagination <- ..\django4\tests\test_content.py PASSED [ 24%]
+tests/test_content.py::TestContent::test_image_visible <- ..\django4\tests\test_content.py PASSED [ 28%]
+tests/test_err_pages.py::test_custom_err_handlers <- ..\django4\tests\test_err_pages.py PASSED [ 32%]
+tests/test_users.py::test_custom_err_handlers <- ..\django4\tests\test_users.py PASSED [ 36%]
+tests/test_users.py::test_profile <- ..\django4\tests\test_users.py PASSED [ 40%]
+tests/test_comment.py::test_comment_created_at <- ..\django4\tests\test_comment.py PASSED [ 44%]
+tests/test_comment.py::test_comment <- ..\django4\tests\test_comment.py PASSED [ 48%]
+tests/test_comment.py::test_404_on_comment_deleted_post <- ..\django4\tests\test_comment.py PASSED [ 52%]
+tests/test_post.py::test_post_created_at <- ..\django4\tests\test_post.py PASSED [ 56%]
+tests/test_post.py::test_post <- ..\django4\tests\test_post.py PASSED    [ 60%]
+tests/test_comment.py::TestCommentModelAttrs::test_model_attrs[`post` field] <- ..\django4\tests\conftest.py PASSED [ 64%]
+tests/test_comment.py::TestCommentModelAttrs::test_model_attrs[`author` field] <- ..\django4\tests\conftest.py PASSED [ 68%]
+tests/test_comment.py::TestCommentModelAttrs::test_model_attrs[`text` field] <- ..\django4\tests\conftest.py PASSED [ 72%]
+tests/test_comment.py::TestCommentModelAttrs::test_model_attrs[`created_at` field] <- ..\django4\tests\conftest.py PASSED [ 76%]
+tests/test_emails.py::test_gitignore <- ..\django4\tests\test_emails.py PASSED [ 80%]
+tests/test_emails.py::test_email_backend_settings <- ..\django4\tests\test_emails.py PASSED [ 84%]
+tests/test_err_pages.py::test_csrf_failure_view <- ..\django4\tests\test_err_pages.py PASSED [ 88%]
+tests/test_post.py::TestPostModelAttrs::test_model_attrs[`image` field] <- ..\django4\tests\conftest.py PASSED [ 92%]
+tests/test_post.py::TestPostModelAttrs::test_model_attrs[`pub_date` field] <- ..\django4\tests\conftest.py PASSED [ 96%]
+tests/test_static_pages.py::test_static_pages_as_cbv <- ..\django4\tests\test_static_pages.py PASSED [100%]
+
+======================= 25 passed, 41 warnings in 1.57s =======================
