@@ -34,6 +34,9 @@ class Category(BaseModel):
         verbose_name = 'категория'
         verbose_name_plural = 'Категории'
 
+    def __str__(self):
+        return self.title
+
 
 class Location(BaseModel):
     name = models.CharField(max_length=TEXT_LENGTH,
@@ -42,6 +45,9 @@ class Location(BaseModel):
     class Meta:
         verbose_name = 'местоположение'
         verbose_name_plural = 'Местоположения'
+
+    def __str__(self):
+        return self.name
 
 
 class Post(BaseModel):
@@ -56,22 +62,20 @@ class Post(BaseModel):
     author = models.ForeignKey(
         User,
         on_delete=models.CASCADE,
-        verbose_name='Автор публикации',
-        related_name='posts'
+        verbose_name='Автор публикации'
     )
     location = models.ForeignKey(
-        Location,
+        'Location',
         on_delete=models.SET_NULL,
         null=True,
-        verbose_name='Местоположение',
-        related_name='posts'
+        blank=True,
+        verbose_name='Местоположение'
     )
     category = models.ForeignKey(
-        Category,
+        'Category',
         on_delete=models.SET_NULL,
         null=True,
-        verbose_name='Категория',
-        related_name='posts'
+        verbose_name='Категория'
     )
 
     class Meta:
@@ -82,7 +86,7 @@ class Post(BaseModel):
 class Comment(models.Model):
     text = models.TextField('Текст комментария')
     post = models.ForeignKey(
-        Post,
+        'Post',
         on_delete=models.CASCADE,
         verbose_name='Коментарий',
         related_name='comments',
